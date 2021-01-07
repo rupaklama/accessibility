@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Outline</title>
+
+    <style>
+      /* using css to create custom outline */
+      *:focus {
+        /* NOTE: Always use opposite color in contrast to the background */
+        outline: 4px solid lime;
+      }
+
+      /* for css framework like Bootstrap where is no 'outline' */
+      .btn-primary:focus {
+        background: darkgray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Every browser's has a default outline when pressing tab key to navigate around web page -->
+    <!-- Some are not visibly too clearer. -->
+    <h1>Outline</h1>
+    <button class="btn-primary">Custom outline!</button>
+  </body>
+</html>

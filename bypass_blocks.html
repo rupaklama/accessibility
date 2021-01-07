@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bypass Block - Skip Links</title>
+
+    <style>
+      .skip-link a {
+        position: absolute;
+        left: 10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        font-size: 1.5rem;
+        background: white;
+        font-weight: bold;
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+      }
+
+      .skip-link a:focus {
+        position: static;
+        width: auto;
+        height: auto;
+      } 
+    </style>
+  </head>
+  <body>
+    <!-- Bypass blocks are mechanisms that skip over repeated material on a webpage. 
+    They are important for users who navigate with a keyboard because as they will 
+    allow users to skip over repeated sections and go to the content they are looking for immediately. -->
+    <!-- It's like going through all the tabindex to get to the particular location on a web page -->
+
+    <!-- NOTE:  Bypass Blocks are often use on TOP of the site, however, 
+      if you have lots of repeated content, it might be a good idea to put in the middle of the site as well
+      if needed -->
+
+    <header class="footer">
+      <div class="skip-link">
+        <a href="#footer">Skip to footer</a>
+        
+      </div>
+      <h1 role="button" tabindex="0">Bypass Blocks</h1>
+    </header>
+
+    <section>
+      <h1>WWF</h1>
+      <p>
+        The World Wide Fund for Nature (WWF) is an international organization
+        working on issues regarding the conservation, research and restoration
+        of the environment, formerly named the World Wildlife Fund. WWF was
+        founded in 1961.
+      </p>
+    </section>
+
+    <section>
+      <h1>WWF's Panda symbol</h1>
+      <p>
+        The Panda has become the symbol of WWF. The well-known panda logo of WWF
+        originated from a panda named Chi Chi that was transferred from the
+        Beijing Zoo to the London Zoo in the same year of the establishment of
+        WWF.
+      </p>
+    </section>
+
+    <footer id="footer">
+      <p>Author: Hege Refsnes</p>
+      <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+    </footer>
+  </body>
+</html>

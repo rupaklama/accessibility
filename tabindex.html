@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabindex</title>
+  </head>
+  <body>
+    <!-- The tabindex attribute specifies the tab order of an element (when the "tab" button is used for navigating). -->
+    <!-- tabindex="0" - is going to make an interactive elements FOCUSABLE. eg. button, links, font-controls
+        NOTE: you can also make divs & paragraphs by allowing it to get FOCUS but screen reader will read the text. 
+
+       Inserts an element into the natural tab order. 
+       The element can be focused by pressing the Tab key, and the element can be focused by calling its focus() method
+       tabindex="5": Any tabindex greater than 0 jumps the element to the front of the natural tab order
+     -->
+    <a role="button" tabindex="0">&#9776;</a>
+    <br />
+
+    <!-- Both interactive elements -->
+    <!-- tabindex="-1" is to remove from tabindex - natural tab order. Not a good idea to do so -->
+    <a href="" tabindex="-1">Link to candy store</a>
+    <br />
+    <a href="">Link to food store</a>
+
+    <!-- By default, There are six HTML elements which, by default, are 'focusable': -->
+    <!-- The tabindex attribute can be applied to almost any element, whether it is by default focusable or not. -->
+    <!-- <a> elements with an href attribute
+        <link> elements with an href attribute
+        <button> elements
+        <input> elements that are not type="hidden"
+        <select> elements
+        <textarea> elements-->
+  </body>
+</html> 

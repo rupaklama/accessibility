@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARIA attributes</title>
+
+  <style>
+    
+  </style>
+</head>
+<body>
+  <!-- ARIA - Accessible Rich Internet Applications (ARIA) is a set of attributes 
+    that define ways to make web content and web applications (especially those developed with JavaScript) 
+    more accessible to people with disabilities. -->
+  
+    <!-- ARIA attributes always start with 
+        aria-label: 'aria' prefix, '-' after & ACTION that you want attribute to take
+        This will label the current element with custom text. 
+    -->
+
+    <!-- screen reader will read aria-expanded="true" when menu opens up,
+      this effect can only be done using aria attributes
+    -->
+    <button aria-expanded="false">&#9776;</button>
+
+    <!-- aria-label: Defines a string value that labels the current element.  -->
+    <!-- screen readers will announce it -->
+    <a href="#" aria-label="google.com">google</a>
+
+    <!-- aria-labelledby: Identifies the element (or elements) that labels the current element -->
+    <!-- screen readers will announce 'Title' in paragraph for the image -->
+    <!-- Screen reader will first read 'alt attrib', so if it's empty then will read 'file name' - not good -->
+    <img src="" alt="" aria-labelledby="caption">
+    <p id="caption">Title</p>
+
+    <!-- ARIA attribute - NOTE: ROLE doesn't have aria prefix -->
+    <!-- If force to use Un-semantic element, use ROLE attribute to make behave as a different element like button 
+        to be as a Semantic element. 
+    -->
+    <!-- Whenever screen readers read the image, it will announce it as 'button' -->
+    <!-- The tabindex attribute specifies the tab order of an element (when the "tab" button is used for navigating). -->
+    <!-- tabindex="0" - is going to make an element FOCUSABLE. Inserts an element into the natural tab order. 
+       The element can be focused by pressing the Tab key, and the element can be focused by calling its focus() method
+       tabindex="5": Any tabindex greater than 0 jumps the element to the front of the natural tab order
+     -->
+    <img src="https://source.unsplash.com/random" alt="" role="button" tabindex="0" alt="" aria-labelledby="caption">
+    <p id="caption">Random Picture</p>
+</body>
+</html>

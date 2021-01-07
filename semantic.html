@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Accessibility</title>
+  </head>
+  <body>
+    <!-- One of the most important things in achieving in Web Accessibility is using Semantic html. 
+      
+      Semantic elements (Meaningful HTML Elements) = elements with a meaning.
+      
+      A semantic element clearly describes its meaning to both the browser and the developer.
+
+      Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+
+      Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+        <article>
+        <aside>
+        <details>
+        <figcaption>
+        <figure>
+        <footer>
+        <header>
+  -->
+    <!-- hamburger menu icon- always change anchor tag to button -->
+    <!-- <a>&#9776;</a> -->
+    <button>&#9776;</button>
+    <br>
+
+    <!-- If force to use Un-semantic element, use ROLE attribute to make behave as a different element like button 
+        to be as a Semantic element. 
+    -->
+    <!-- This will make anchor element to behave as a BUTTON element -->
+
+    <!-- The tabindex attribute specifies the tab order of an element (when the "tab" button is used for navigating). -->
+    <!-- tabindex="0" - is going to make an element FOCUSABLE. 
+       Inserts an element into the natural tab order. 
+       The element can be focused by pressing the Tab key, and the element can be focused by calling its focus() method
+       tabindex="5": Any tabindex greater than 0 jumps the element to the front of the natural tab order
+     -->
+    <a role="button" tabindex="0">&#9776;</a> 
+   
+
+  </body>
+</html>
