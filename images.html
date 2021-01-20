@@ -10,6 +10,9 @@
     <!-- screen readers will announce 'Title' in paragraph for the image -->
     <!-- Screen reader will first read 'alt attrib', so if it's empty then will read 'file name' - not good -->
 
-    <img src="https://source.unsplash.com/random" alt="random pictures" />
+    <figure>
+      <img src="https://source.unsplash.com/random" alt="" tabindex="0" aria-labelledby="caption"/>
+      <figcaption id="caption">Picture of the day!</figcaption>
+    </figure>
   </body>
 </html>
